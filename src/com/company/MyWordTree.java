@@ -17,7 +17,7 @@ class MyWordTree {
         while (flag==1){
             System.out.println("请输入关键词");
             a=sc.next();
-            System.out.println("请输入编号");
+            System.out.println("请输入编号(两位数)");
             b= sc.nextInt();
             setWord(a,b,head);
             System.out.println("请输入1继续");
