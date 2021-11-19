@@ -57,12 +57,11 @@ class MyWordTree {
                     if (a==tt.k){
                         ts=deleteStr(ts,a);
                         temp=tt;
-                        break;
                     }else {
                         tail= toBeList(temp,ts);
                         tail.no=ma;
-                        break;
                     }
+                    break;
                 }
                 if (tail!=null){
                     break;
@@ -85,14 +84,12 @@ class MyWordTree {
         mm.left[chooseNode(mm)]=tail ;
         MyWordTreeNode temp=null;
         for (char cc:s.toCharArray()){
-            if (tail.k=='\u0000'){
-                tail.k=cc;
-            }else {
-                temp=new MyWordTreeNode();
-                tail.left[0]=temp;
-                tail=temp;
-                tail.k=cc;
+            if (tail.k != '\u0000') {
+                temp = new MyWordTreeNode();
+                tail.left[0] = temp;
+                tail = temp;
             }
+            tail.k=cc;
         }
         return tail;
     }
